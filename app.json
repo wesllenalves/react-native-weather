@@ -1,7 +1,7 @@
 {
     "expo": {
-        "name": "react-native-weather",
-        "slug": "react-native-weather",
+        "name": "Meu Tempo Facil",
+        "slug": "Meu-Tempo-Facil",
         "platforms": ["ios", "android", "web"],
         "version": "1.0.0",
         "orientation": "portrait",
@@ -15,6 +15,10 @@
             "fallbackToCacheTimeout": 0
         },
         "assetBundlePatterns": ["**/*"],
+        "android": {
+            "package": "com.wesllenalves.meutempofacil",
+            "versionCode": 1
+        },
         "ios": {
             "supportsTablet": true
         }

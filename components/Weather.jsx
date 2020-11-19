@@ -2,6 +2,8 @@ import React from "react";
 import { isSameDay, format } from "date-fns";
 import imageDictionary from "../utils/imageDictionary.js";
 import Card from "./Card";
+import * as Localization from 'expo-localization';
+import i18n from 'i18n-js';
 import {
     Container,
     CurrentDay,
@@ -12,6 +14,26 @@ import {
     Description,
     Week,
 } from "./Styles";
+
+
+// Set the key-value pairs for the different languages you want to support.
+i18n.translations = {
+    en: { 
+        Today: 'Hoje',
+        Sunday: 'Domingo',
+        Monday: 'Segunda-feira',
+        Tuesday: 'Terça-feira',
+        Wednesday: 'Quarta-feira',
+        Thursday: 'Quinta-feira',
+        Friday: 'Sexta-feira',
+        Saturday: 'Sábado',
+
+    },
+  };
+  // Set the locale once at the beginning of your app.
+i18n.locale = Localization.locale;
+  // When a value is missing from a language it'll fallback to another language with the key present.
+i18n.fallbacks = true;
 
 const Weather = ({ forecast: { name, list, timezone } }) => {
     const currentWeather = list.filter((day) => {
@@ -37,7 +59,7 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
             <Container>
                 <CurrentDay>
                     <City>{name}</City>
-                    <BigText>Today</BigText>
+                    <BigText>{i18n.t('Today')}</BigText>
                     <BigIcon
                         source={
                             imageDictionary[
@@ -55,7 +77,7 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
                         <Card
                             key={index}
                             icon={day.icon}
-                            name={day.name.substring(0, 3)}
+                            name={i18n.t(day.name).substring(0, 3).toUpperCase()}
                             temp={day.temp}
                             hour={day.hour}
                         />

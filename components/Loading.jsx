@@ -5,9 +5,9 @@ import { Container, BigText, BigIcon, Description } from "./Styles";
 const Loading = (props) => {
   return (
     <Container>
-      <BigText>Welcome!</BigText>
+      <BigText>Bem-vindo!</BigText>
       <BigIcon source={imageDictionary["01d"]} />
-      <Description>Loading...</Description>
+      <Description>Carregando...</Description>
     </Container>
   );
 };
