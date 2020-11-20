@@ -17,10 +17,16 @@
         "assetBundlePatterns": ["**/*"],
         "android": {
             "package": "com.wesllenalves.meutempofacil",
-            "versionCode": 1
+            "config": {
+                "googleMobileAdsAppId": "ca-app-pub-3072202765969173~5400010656"
+            },
+            "versionCode": "0.0.1"
         },
         "ios": {
-            "supportsTablet": true
+            "supportsTablet": true,
+            "config": {
+                "googleMobileAdsAppId": "ca-app-pub-3072202765969173~5400010656"
+            }
         }
     }
 }

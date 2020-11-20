@@ -52,6 +52,7 @@ export const Week = styled.ScrollView`
   height: 150px;
   position: absolute;
   background: black;
+  margin-bottom: 50px;
 `;
 
 export const Day = styled.View`
@@ -69,4 +70,8 @@ export const SmallText = styled.Text`
   font-size: 20px;
   font-weight: 300;
   color: white;
+`;
+
+export const Propaganda = styled.View`
+margin-top: 10px;
 `;

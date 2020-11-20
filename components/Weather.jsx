@@ -4,6 +4,13 @@ import imageDictionary from "../utils/imageDictionary.js";
 import Card from "./Card";
 import { i18n } from "../utils/i18n";
 import {
+    AdMobBanner,
+    AdMobInterstitial,
+    PublisherBanner,
+    AdMobRewarded,
+    setTestDeviceIDAsync,
+} from 'expo-ads-admob';
+import {
     Container,
     CurrentDay,
     City,
@@ -12,7 +19,10 @@ import {
     Temp,
     Description,
     Week,
+    Propaganda,
 } from "./Styles";
+
+
 
 const Weather = ({ forecast: { name, list, timezone } }) => {
     const currentWeather = list.filter((day) => {
@@ -62,6 +72,14 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
                         />
                     ))}
                 </Week>
+                <Propaganda>
+                    <AdMobBanner
+                    bannerSize="fullBanner"
+                    adUnitID="ca-app-pub-3072202765969173/2773847315" 
+                    setTestDeviceIDAsync
+                    servePersonalizedAds // true or false
+                    onDidFailToReceiveAdWithError={erro => {console.log(erro)}} />
+                </Propaganda>
             </Container>
         )
     );
