@@ -20,7 +20,7 @@
             "config": {
                 "googleMobileAdsAppId": "ca-app-pub-3072202765969173~5400010656"
             },
-            "versionCode": "0.0.1"
+            "versionCode": 1
         },
         "ios": {
             "supportsTablet": true,
