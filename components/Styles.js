@@ -72,6 +72,4 @@ export const SmallText = styled.Text`
   color: white;
 `;
 
-export const Propaganda = styled.View`
-margin-top: 10px;
-`;
+export const Propaganda = styled.View``;

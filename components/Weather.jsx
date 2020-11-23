@@ -5,9 +5,6 @@ import Card from "./Card";
 import { i18n } from "../utils/i18n";
 import {
     AdMobBanner,
-    AdMobInterstitial,
-    PublisherBanner,
-    AdMobRewarded,
     setTestDeviceIDAsync,
 } from 'expo-ads-admob';
 import {
@@ -74,9 +71,9 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
                 </Week>
                 <Propaganda>
                     <AdMobBanner
-                    bannerSize="fullBanner"
+                    bannerSize="smartBannerPortrait"
                     adUnitID="ca-app-pub-3072202765969173/2773847315" 
-                    setTestDeviceIDAsync
+                    setTestDeviceIDAsync={false}
                     servePersonalizedAds // true or false
                     onDidFailToReceiveAdWithError={erro => {console.log(erro)}} />
                 </Propaganda>
