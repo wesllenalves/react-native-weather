@@ -68,6 +68,7 @@ const Weather = ({ forecast: { name, list, timezone } }) => {
                             hour={day.hour}
                         />
                     ))}
+                
                 </Week>
                 <Propaganda>
                     <AdMobBanner

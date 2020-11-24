@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import {widthPercentageToDP, heightPercentageToDP } from '../utils/response';
 
 export const Container = styled.SafeAreaView`
   flex: 1;
@@ -10,7 +11,7 @@ export const Container = styled.SafeAreaView`
 export const CurrentDay = styled.View`
   position: relative;
   flex: 1;
-  margin-top: 60px;
+  margin-top: 58px;
   align-items: center;
 `;
 
@@ -48,11 +49,11 @@ export const Description = styled.Text`
 export const Week = styled.ScrollView`
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 150px;
+  width: ${widthPercentageToDP('100%')};
+  height: ${heightPercentageToDP('54%')};
   position: absolute;
   background: black;
-  margin-bottom: 50px;
+  margin-top: 2%;
 `;
 
 export const Day = styled.View`
@@ -70,6 +71,10 @@ export const SmallText = styled.Text`
   font-size: 20px;
   font-weight: 300;
   color: white;
+  margin-bottom: 2%;
 `;
 
-export const Propaganda = styled.View``;
+export const Propaganda = styled.View`  
+  position: absolute;
+  bottom: 0%;
+`;
