@@ -20,6 +20,22 @@
             "config": {
                 "googleMobileAdsAppId": "ca-app-pub-3072202765969173~5400010656"
             },
+            "permissions": [
+                "ACCESS_BACKGROUND_LOCATION", 
+                "ACCESS_FINE_LOCATION",
+                "ACCESS_WIFI_STATE",
+                "FOREGROUND_SERVICE",
+                "ACCESS_COARSE_LOCATION", 
+                "ACCESS_NETWORK_STATE", 
+                "INTERNET",
+                "READ_EXTERNAL_STORAGE",
+                "READ_INTERNAL_STORAGE",
+                "RECEIVE_BOOT_COMPLETED",
+                "SYSTEM_ALERT_WINDOW",
+                "USE_FINGERPRINT",
+                "WAKE_LOCK",
+                "WRITE_EXTERNAL_STORAGE"
+            ], 
             "versionCode": 1
         },
         "ios": {
